@@ -1,0 +1,446 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f5;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #edf3fb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #008236;
+}
+
+.logo-img {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-links a {
+  color: #008236;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-links a:hover {
+  color: #81C784;
+}
+/* Hero Section */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 20px 50px;
+  color: white;
+  text-align: center;
+
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('../imagens/ChatGPT\ Image\ 26\ de\ mai.\ de\ 2025\,\ 23_20_56.png'); /* imagem mais leve e sem espaços */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Responsividade com clamp */
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+.cta-button {
+  margin-top: 30px;
+  background-color: white;
+  color: #388E3C;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #e8f5e9;
+  transform: scale(1.05);
+}
+
+/* Animação suave */
+.hero > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.hero > *:nth-child(1) { animation-delay: 0.2s; }
+.hero > *:nth-child(2) { animation-delay: 0.4s; }
+.hero > *:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark mode (opcional futuro) */
+@media (prefers-color-scheme: dark) {
+  .hero {
+    background-color: #f5f2f2;
+  }
+
+  .cta-button {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+  }
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.image-row img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Sections */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Responsividade para seções */
+.about, .features, .newsletter {
+  background-color: #edf3fb;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.about {
+  max-width: 900px;
+  margin: 80px auto 40px;
+  padding: 0 20px;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  color: #222;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #f9faf9;
+  border-radius: 15px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 15px rgba(56, 142, 60, 0.1);
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  transition: transform 0.3s ease;
+  text-align: justify;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(56, 142, 60, 0.15);
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  filter: invert(36%) sepia(88%) saturate(659%) hue-rotate(94deg) brightness(89%) contrast(85%);
+}
+
+.card p {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.card strong {
+  color: #388E3C;
+  font-weight: 600;
+}
+
+
+/* Recursos */
+.features ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.features li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 30px;
+}
+
+.features li::before {
+  content: '\2713';
+  color: #81C784;
+  font-weight: bold;
+  display: inline-block;
+  width: 20px;
+  position: absolute;
+  left: 0;
+}
+
+/* Imagens de recursos */
+.imagens-recursos {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin-top: 70px;
+  flex-wrap: wrap;
+}
+
+.imagens-com-titulo {
+  max-width: 350px;
+  text-align: center;
+  flex: 1 1 350px;
+}
+
+.imagens-com-titulo img {
+  width: 100%;
+  max-width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.imagens-com-titulo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+  background-color: #81C784;
+  color: white;
+}
+
+/* Responsividade para Mobile (máximo 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .navbar-links {
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero img {
+    width: 80%;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .notebook-mockup-container {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .carousel-container {
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 60%;
+  }
+
+  .features ul {
+    text-align: center;
+    padding: 0;
+  }
+
+  .features li {
+    font-size: 1rem;
+  }
+
+  .imagens-recursos {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .imagens-recursos img {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+.imagens-com-titulo img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.imagens-com-titulo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Responsividade para telas muito pequenas (ex: celulares menores que 400px) */
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .features ul {
+    padding-left: 20px;
+  }
+
+  .notebook-mockup-container {
+    margin-top: 10px;
+  }
+
+  .carousel-container {
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 50%;
+  }
+}
+
+/* Fundo escurecido com desfoque */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+
+/* Ativo */
+.lightbox-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Conteúdo com a imagem no centro */
+.lightbox-content {
+  position: relative;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  max-width: 1000px;
+  max-height: 1000px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Imagem central sem zoom */
+.lightbox-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  cursor: default; /* remove o cursor de zoom */
+}
+
+/* Botão de fechar */
+.lightbox-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #fff;
+  color: #333;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}

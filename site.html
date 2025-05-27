@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOFC FinUp - Controle de Despesas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+<header>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      MOFC FinUp
+    </div>
+    <div class="navbar-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#newsletter">Conhecer</a>
+    </div>
+  </nav>
+</header>
+
+  <section class="hero">
+    <h1>Controle suas finanças com facilidade</h1>
+    <p>Registre seus gastos, categorize suas despesas e mantenha o controle total do seu dinheiro com o FinUp!</p>
+    <button class="cta-button" onclick="scrollToNewsletter()">Quero conhecer!</button>
+</section>
+
+<section class="about" id="sobre">
+  <h2>Sobre o FinUp</h2>
+  <div class="about-cards">
+    <div class="card">
+      <img src="imagens/noun-finance-7897373.png" alt="Facilidade" class="card-icon">
+      <p>O <strong>FinUp</strong> é uma solução desenvolvida para facilitar o controle financeiro de forma prática, intuitiva e acessível.</p>
+    </div>
+    <div class="card">
+      <img src="imagens/noun-community-7897379.png" alt="Estudantes" class="card-icon">
+      <p>Projeto criado por estudantes do 5º período do curso de <strong>Ciência da Computação</strong>, aplicando conhecimentos práticos.</p>
+    </div>
+    <div class="card">
+      <img src="imagens/noun-developer-7852509.png" alt="Tecnologia" class="card-icon">
+      <p>Utilizamos <strong>Java com Spring Boot</strong> e <strong>TypeScript</strong>, garantindo uma aplicação robusta e segura.</p>
+    </div>
+    <div class="card">
+      <img src="imagens/noun-finance-7569317.svg" alt="Objetivo" class="card-icon">
+      <p>Proporcionar mais clareza e autonomia na organização das finanças pessoais.</p>
+    </div>
+    <div class="card">
+      <img src="imagens/noun-communication-7897378.png" alt="Evolução" class="card-icon">
+      <p>Estamos em constante evolução com base em feedbacks e inovações tecnológicas.</p>
+    </div>
+     <div class="card">
+      <img src="imagens/noun-student-7846316.png" alt="Evolução" class="card-icon">
+      <p>Nosso grupo é formado por Marden, Otávio, Felipe e Carlos, assim se deu o nome MOFC FinUp.</p>
+    </div>
+  </div>
+</section>
+
+</section>
+
+  <section class="features" id="recursos">
+    <h2>Principais Recursos</h2>
+    <ul>
+      <li>Cadastro fácil de despesas</li>
+      <li>Classificação por categorias</li>
+      <li>Controle por forma de pagamento (PIX, crédito, débito, dinheiro)</li>
+      <li>Relatórios e gráficos automáticos</li>
+      <li>Definição de metas financeiras</li>
+    </ul>
+
+<div class="imagens-recursos">
+  <div class="imagens-com-titulo">
+      <img src="imagens/dashboard.jpeg" alt="Finanças 1" class="zoomable-image" data-title="Dashboard">
+    <h3>Dashboard</h3>
+  </div>
+
+  <div class="imagens-com-titulo">
+<img src="imagens/lançamento.jpeg" alt="Finanças 1" class="zoomable-image" data-title="Lançamento">
+    <h3>Tela de Lançamentos</h3>
+  </div>
+
+  <div class="imagens-com-titulo">
+      <img src="imagens/adicionar.jpeg" alt="Finanças 3" class="zoomable-image" data-title="adicionar">
+    <h3>Cadastro de Despesas</h3>
+  </div>
+</div>
+  </section>
+
+  <section class="newsletter" id="newsletter">
+    <h2>Conheça o FinUp</h2>
+    <p>Assista ao vídeo de introdução abaixo e conheça mais sobre nosso aplicativo!</p>
+    <div style="max-width: 800px; margin: 40px auto;">
+      <iframe width="100%" height="450" 
+        src="https://www.youtube.com/embed/6KYo49g61RQ" 
+        title="Vídeo de Introdução" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+    </div>
+    <a href="#" target="_blank" style="display: inline-block; padding: 15px 30px; background-color: #388E3C; color: white; border-radius: 25px; text-decoration: none; font-size: 1.2rem; transition: background 0.3s;">Acessar o MOFC FinUp</a>
+  </section>
+
+  <footer>
+    &copy; 2025 MOFC FinUp - Todos os direitos reservados
+  </footer>
+
+    <script src="js/script.js"></script>
+
+<div class="lightbox-overlay" id="lightbox">
+  <div class="lightbox-content">
+    <span class="lightbox-close" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="" alt="Imagem Ampliada">
+  </div>
+</div>
+
+</body>
+</html>
